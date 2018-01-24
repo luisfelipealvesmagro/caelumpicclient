@@ -1,0 +1,39 @@
+<header></header>
+
+<div class="container">
+    <br>
+    <h4>Cadastro de Fotos</h4>
+    <br>
+    <form [formGroup]="form" name="formAdicionar" (submit)="salvar($event)">
+
+        <label for="titulo">Titulo</label>
+        <input 
+            formControlName="titulo"
+            name="titulo" 
+            [(ngModel)]="foto.titulo"
+            type="text">
+        <p>form = {{form.valid}}</p>
+        <p>titulo = {{form.controls.titulo.valid}}</p>
+        <label for="url">URL da imagem</label>
+        <input 
+            formControlName="url"
+            name="url" 
+            [(ngModel)]="foto.url" 
+            type="text">
+
+        <label for="descricao">Descrição</label>
+        <textarea 
+            class="materialize-textarea"
+            formControlName="descricao"
+            name="descricao" 
+            [(ngModel)]="foto.descricao">
+        </textarea>
+        
+        <button class="waves-effect waves-light btn" [routerLink]="['']">Voltar</button>
+        <button class="waves-effect waves-light btn" type="submit">Salvar</button>
+        
+        <br><br>
+    </form>
+</div>
+
+<footer></footer>

@@ -1,0 +1,9 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row .col {
+    display: flex;
+    float: none !important;
+    margin-left: initial !important;
+}
